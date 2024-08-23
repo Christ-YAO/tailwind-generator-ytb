@@ -5,10 +5,10 @@ export const POST = async (req: Request) => {
     const { prompt } = await req.json();
 
     const response = await openAI.chat.completions.create({
-        model: "gpt-3.5-turbo-16k",
+        model: "gpt-4o-mini",
         messages: [
             {
-                role: "assistant",
+                role: "system",
                 content: `Write only Tailwind code`,
             },
             {
